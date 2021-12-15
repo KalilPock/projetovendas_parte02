@@ -11,6 +11,11 @@
          <Label text="Pessoas"/>
          <ListView fx:id="lstPessoas" />
       </VBox>
+
+      <VBox>
+         <Label text="Produtos"/>
+         <ListView fx:id="lstProdutos" />
+      </VBox>
       
    </children>
 </FlowPane>

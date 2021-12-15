@@ -16,7 +16,8 @@
             <Insets topRightBottomLeft="8.0" />
          </padding>
          <Button onAction="#loadListas" text="Listas" />
-         <Button text="Cadastrar Pessoa" />
+         <Button text="Cadastrar Pessoa" onAction="#loadCadastroPessoa"/>
+         <Button text="Cadastrar Produto" onAction="#loadCadastroProduto"/>
       </VBox>
    </left>
 
