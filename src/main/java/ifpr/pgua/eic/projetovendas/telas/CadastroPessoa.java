@@ -1,5 +1,8 @@
 package ifpr.pgua.eic.projetovendas.telas;
 
+import java.sql.SQLException;
+
+import ifpr.pgua.eic.projetovendas.repositorios.RepositorioPessoas;
 import ifpr.pgua.eic.projetovendas.repositorios.RepositorioVendas;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -18,9 +21,9 @@ public class CadastroPessoa {
     private TextField tfTelefone;
 
 
-    private RepositorioVendas repositorio;
+    private RepositorioPessoas repositorio;
 
-    public CadastroPessoa(RepositorioVendas repositorio){
+    public CadastroPessoa(RepositorioPessoas repositorio){
         this.repositorio = repositorio;
     }
 
@@ -49,13 +52,20 @@ public class CadastroPessoa {
         }
 
         if(!temErro){
-            boolean ret = repositorio.cadastrarPessoa(nome, email, telefone);
-            if(ret){
-                msg = "Pessoa cadastrada com sucesso!";
-                limpar();
-            }else{
-                msg = "Erro ao cadastrar pessoa!";
+            boolean ret;
+            try{
+                ret = repositorio.cadastrarPessoa(nome, email, telefone);
+                if(ret){
+                    msg = "Pessoa cadastrada com sucesso!";
+                    limpar();
+                }else{
+                    msg = "Erro ao cadastrar pessoa!";
+                }
+            }catch(SQLException e){
+                temErro = true;
+                msg = e.getMessage();
             }
+
         }
 
         Alert alert = new Alert(temErro?AlertType.ERROR:AlertType.INFORMATION,msg);
