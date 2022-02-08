@@ -79,7 +79,7 @@ public class JDBCPessoaDAO implements PessoaDAO {
         rs.close();
         pstmt.close();
         con.close();
-
+//
         return lista;
     }
 

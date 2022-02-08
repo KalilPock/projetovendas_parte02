@@ -40,4 +40,4 @@ public class Home {
         painelCentral.getChildren().add(App.loadTela("fxml/cadastro_produto.fxml", (o)->new CadastroProduto(repositorio)));
     }
 }
-
+//

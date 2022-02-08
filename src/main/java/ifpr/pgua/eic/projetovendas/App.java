@@ -15,12 +15,11 @@ import ifpr.pgua.eic.projetovendas.daos.interfaces.PessoaDAO;
 import ifpr.pgua.eic.projetovendas.repositorios.RepositorioPessoas;
 import ifpr.pgua.eic.projetovendas.repositorios.RepositorioVendas;
 import ifpr.pgua.eic.projetovendas.telas.Home;
-
 /**
  * JavaFX App
  */
 public class App extends Application {
-
+//
     PessoaDAO pessoaDAO = new JDBCPessoaDAO();
     //PessoaDAO pessoaDAO = new TXTPessoaDAO();
 

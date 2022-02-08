@@ -41,7 +41,7 @@ public class RepositorioPessoas {
 
         return false;
     }
-
+//
     public Pessoa buscarPessoa(String email) {
         return this.pessoas.stream().filter((pessoa) -> pessoa.getEmail().equals(email)).findFirst().orElse(null);
     }

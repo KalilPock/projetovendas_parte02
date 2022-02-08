@@ -15,7 +15,7 @@ public class Produto {
         this.setValor(valor);
     }
 
-    
+//    
     public Produto(String nome, String descricao, int quantidadeEstoque, double valor) {
         this(-1, nome, descricao, quantidadeEstoque, valor);
     }
