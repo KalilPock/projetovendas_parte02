@@ -14,7 +14,7 @@ public class JDBCPessoaDAO implements PessoaDAO {
 
     @Override
     public boolean cadastrar(Pessoa p) throws Exception {
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/app", "user", "user12345");
+        Connection con = DriverManager.getConnection("jdbc:mysql://root@localhost:3306/info_kalil");
 
         String sql = "INSERT INTO pessoas(nome,email,telefone) VALUES (?,?,?)";
 
@@ -56,7 +56,7 @@ public class JDBCPessoaDAO implements PessoaDAO {
     public ArrayList<Pessoa> listar() throws Exception {
         ArrayList<Pessoa> lista = new ArrayList<>();
 
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/app", "user", "user12345");
+        Connection con = DriverManager.getConnection("jdbc:mysql://root@localhost:3306/info_kalil");
         
         String sql = "SELECT * FROM pessoas";
 

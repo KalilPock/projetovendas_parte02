@@ -1,3 +1,4 @@
+
 package ifpr.pgua.eic.projetovendas;
 
 import javafx.application.Application;
@@ -10,7 +11,6 @@ import javafx.util.Callback;
 import java.io.IOException;
 
 import ifpr.pgua.eic.projetovendas.daos.JDBCPessoaDAO;
-import ifpr.pgua.eic.projetovendas.daos.TXTPessoaDAO;
 import ifpr.pgua.eic.projetovendas.daos.interfaces.PessoaDAO;
 import ifpr.pgua.eic.projetovendas.repositorios.RepositorioPessoas;
 import ifpr.pgua.eic.projetovendas.repositorios.RepositorioVendas;

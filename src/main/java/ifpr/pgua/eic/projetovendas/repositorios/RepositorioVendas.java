@@ -23,7 +23,7 @@ public class RepositorioVendas {
 
         if (buscarProduto(nome) == null) {
             try {
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/app", "user", "user12345");
+                Connection con = DriverManager.getConnection("jdbc:mysql://root@localhost:3306/info_kalil");
 
                 Statement stm = con.createStatement();
 
