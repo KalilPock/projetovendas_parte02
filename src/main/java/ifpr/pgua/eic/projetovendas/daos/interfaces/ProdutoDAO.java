@@ -9,4 +9,5 @@ public interface ProdutoDAO {
     boolean atualizar(int id, Produto p) throws Exception;
     boolean remover(Produto p) throws Exception;
     ArrayList<Produto> listar() throws Exception;
+    
 }

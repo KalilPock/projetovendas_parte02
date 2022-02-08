@@ -74,6 +74,7 @@ public class JDBCPessoaDAO implements PessoaDAO {
 
             lista.add(p);
         }
+        
 
         rs.close();
         pstmt.close();
